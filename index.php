@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
 
   <script src="librerias/jquery-3.2.1.min.js"></script>
+  <script src="js/functions.js"></script> 
   <script src="librerias/bootstrap/js/bootstrap.js"></script>
   <script src="librerias/alertifyjs/alertify.js"></script>
 </head>
@@ -43,23 +44,17 @@
     <div class="page-header">
         <h1 align="center">Albums</h1>
     </div>
+    <!-- Loop throw each album-->
+    <div id="table"></div>
 
-    <!-- Albums -->
+    <!-- To create a new album-->
     <div class="container">
       <div class="row">
 
           <div class="col-lg-3 col-sm-4 col-xs-6">
-            <a title="Image 2" href="#">
-              <img class="thumbnail img-responsive" src="//placehold.it/600x350/2255EE">
-                <p>Nature</p>
+            <a title="Image 2" data-toggle="modal" data-target="#createModal">
+              <img class="thumbnail img-responsive" src="images/plus.png">
             </a>
-            <div class="align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#viewModal">Details</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editModal">Edit</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
-                </div>
-              </div>
           </div>
           
       </div>
@@ -79,12 +74,14 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Album title:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="name">
+                <label for="message-text" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="description"></textarea>
               </div>
                 <div>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="save">Add</button>
                 </div>
             </form>
           </div>
@@ -133,6 +130,10 @@
                 <label for="recipient-name" class="col-form-label">Title: Title example</label>
                 <br>
                 <label for="recipient-name" class="col-form-label">Total images: 23</label>
+                <br>
+                <label for="recipient-name" class="col-form-label">Description: Here I have all my favorite animals images. </label>
+                <label for="recipient-name" class="col-form-label">Date created: 5/6/2018</label>
+                <br>
               </div>
                 <div>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -148,3 +149,19 @@
   </body>
 </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#table').load('componentes/table.php');
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#save').click(function(){
+      name=$('#name').val();
+      description=$('#description').val();
+      addData(name,description);
+    });
+  });
+</script>

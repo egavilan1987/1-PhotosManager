@@ -5,7 +5,7 @@
 			$servidor="localhost";
 			$usuario="root";
 			$password="";
-			$bd="pruebas";
+			$bd="albumdb";
 
 			$conexion=mysqli_connect($servidor,$usuario,$password,$bd);
 
