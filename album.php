@@ -41,37 +41,26 @@
     </nav>
   </br></br>
     <div class="page-header">
-        <h1>Albums Name</h1>
+        <h1>Albums</h1>
     </div>
 
-  
+    <div class="row">
 
 
-      <div class="col-md-2">
-        <div class="thumbnail" class="align-items-center">
-          <a href="http://gallery.smartadserver.com/demo_web/image/image_placeholder.png">
-            <img src="http://gallery.smartadserver.com/demo_web/image/image_placeholder.png" alt="Lights" style="width:50%">
-            <div class="caption">
-            <p>Nature</p>
-          </div>
-          </a>
-          <div class="align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
-            </div>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="https://www.w3schools.com/w3css/img_5terre.jpg">
+        </a>
       </div>
-
-  
-
-    
-
-    
+    </div>
 
 
+
+
+
+
+    </div>
 
 
       <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
