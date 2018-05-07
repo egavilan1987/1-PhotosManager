@@ -102,11 +102,15 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
+                <label for="recipient-name" class="col-form-label">ID:</label>
+                <input type="text" disabled="disabled" class="form-control" id="idAlbum">
                 <label for="recipient-name" class="col-form-label">Edit title:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="update_name">
+                <label for="message-text" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="update_description"></textarea>
               </div>
                 <div>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-primary" id="updateData" data-dismiss="modal">Save</button>
                 </div>
             </form>
           </div>
@@ -163,5 +167,10 @@
       description=$('#description').val();
       addData(name,description);
     });
+
+    $('#updateData').click(function(){
+      updateData();
+    });
+
   });
 </script>
